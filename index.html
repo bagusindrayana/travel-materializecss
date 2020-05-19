@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Wisata</title>
+    <meta name="description" content="My first PWA" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#00897B" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
+
+</head>
+
+<body>
+    <!-- Navigasi -->
+    <nav class="green lighten-1" role="navigation" >
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo" id="logo-container">Wisata</a>
+            <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+
+            <ul class="topnav right hide-on-med-and-down"></ul>
+            <ul class="sidenav" id="nav-mobile"></ul>
+        </div>
+    </nav>
+    <!-- Akhir Navigasi -->
+  
+    <div class="container" id="body-content"></div>
+
+    <footer class="page-footer green lighten-1">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Wisata Kalimantan Timur</h5>
+              <p class="grey-text text-lighten-4">Berbagai macam wisata di provinsi Kalimantan Timur </p>
+    
+    
+            </div>
+            <div class="col l3 s12">
+              <h5 class="white-text">Site map</h5>
+              <ul>
+                <li><a class="white-text" href="#!">Home</a></li>
+                <li><a class="white-text" href="#!">Kuliner</a></li>
+                <li><a class="white-text" href="#!">Alam</a></li>
+                <li><a class="white-text" href="#!">Budaya</a></li>
+              </ul>
+            </div>
+            <div class="col l3 s12">
+              <h5 class="white-text">Share</h5>
+              <ul>
+                <li><a class="white-text" href="#!">Twitter</a></li>
+                <li><a class="white-text" href="#!">Facebook</a></li>
+                <li><a class="white-text" href="#!">Github</a></li>
+    
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            Copyright by <a class="green-text text-lighten-3" href="http://bagusindrayana.github.com">Bagus Indrayana</a>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+        // REGISTER SERVICE WORKER
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker
+                    .register("/service-worker.js")
+                    .then(function () {
+                        console.log("Pendaftaran ServiceWorker berhasil");
+                    })
+                    .catch(function () {
+                        console.log("Pendaftaran ServiceWorker gagal");
+                    });
+            });
+        } else {
+            console.log("ServiceWorker belum didukung browser ini.");
+        }
+
+       
+
+        
+    </script>
+
+</body>
+
+</html>
